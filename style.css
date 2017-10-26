@@ -121,7 +121,7 @@ nav li a:hover/*, nav .menu-btn:hover*/ {
   transform: rotate(-90deg) translateX(-10px);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 995px) {
 
   header nav {
     display: none;
