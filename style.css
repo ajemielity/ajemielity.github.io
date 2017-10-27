@@ -20,7 +20,7 @@ a {
 /***** HEADER *****/
 
 header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.58);
   position: fixed;
   top: 0;
   left: 40px;
@@ -121,6 +121,57 @@ nav li a:hover/*, nav .menu-btn:hover*/ {
   transform: rotate(-90deg) translateX(-10px);
 }
 
+/**smaller header - shrinked on scroll**/
+
+/* Transitions */
+
+/*header.smaller,
+header.smaller .header__logo-container,
+header.smaller .header__logo,
+header.smaller nav ul.header__menu*/
+header,
+header .header__logo-container,
+header .header__logo,
+header nav ul.header__menu {
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header.smaller {
+  background-color: white;
+}
+header.smaller .header__logo-container {
+  height: auto;
+  width: auto;
+  margin-top: 12px;
+  border-radius: 0;
+  border: 0;
+}
+
+header.smaller .header__logo {
+  margin-top: 0;
+  width: 110px;
+  height: auto;
+}
+
+header.smaller nav ul.header__menu {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+/************************************************************************************/
+
+/**media for small screens**/
 @media all and (max-width: 995px) {
 
   header nav {
@@ -145,6 +196,15 @@ nav li a:hover/*, nav .menu-btn:hover*/ {
 
   .header__hamburger:focus + nav {
     display: flex;
+  }
+
+  /*media for shrinked menu*/
+  header.smaller .header__logo-container {
+    top: 10px;
+  }
+
+  header.smaller .header__hamburger {
+    top: -35px;
   }
 
 }
@@ -184,15 +244,12 @@ section:nth-child(4) {
 /***** HELLO-SECTION *****/
 
 .hello-container {
-  height: 80vh;
+  height: 100vh;
   background-image: url('images/homeBackground.png');
   background-size: cover;
 }
 /***** end HELLO-SECTION *****/
 
-.hello-container {
-  height: 100vh;
-}
 
 /***** main-ABOUT-SECTION *****/
 /***** end main-ABOUT-SECTION *****/
