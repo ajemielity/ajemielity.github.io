@@ -1,6 +1,5 @@
 window.addEventListener('scroll', function() {
-    const distanceY = window.pageYOffset,
-      /*const distanceY = window.pageYOffset || document.documentElement.scrollTop,*/
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop
       shrinkOn = 125
     if (distanceY > shrinkOn) {
       console.log(distanceY)
